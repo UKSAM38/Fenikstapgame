@@ -1,0 +1,147 @@
+/* Genel Ayarlar */
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: url('galaxy-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    animation: backgroundMove 60s infinite alternate;
+}
+
+@keyframes backgroundMove {
+    from { background-position: 0 0; }
+    to { background-position: 100% 100%; }
+}
+
+/* Ana Konteyner */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Üst Bar */
+.top-bar {
+    width: 100%;
+    background: rgba(25, 25, 25, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #ff00ff;
+}
+
+/* Kart Stilleri */
+.info-cards {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: rgba(25, 25, 25, 0.8);
+    padding: 10px 20px;
+    border: 1px solid #00ffff;
+    box-shadow: 0 0 15px #00ffff;
+    color: #00ffff;
+    border-radius: 10px;
+}
+
+/* Coin Gösterimi */
+.coins-display h2 {
+    font-size: 2em;
+    color: #ffcc00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.coin-icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Feniks Görseli */
+.phoenix-container {
+    margin: 20px 0;
+}
+
+#phoenix {
+    width: 150px;
+    cursor: pointer;
+    filter: drop-shadow(0 0 10px #ff00ff);
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+#phoenix:active {
+    animation: pulse 0.3s ease;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); filter: drop-shadow(0 0 5px #ff00ff); }
+    50% { transform: scale(1.1); filter: drop-shadow(0 0 20px #ff00ff); }
+    100% { transform: scale(1); filter: drop-shadow(0 0 5px #ff00ff); }
+}
+
+/* Enerji Barı */
+.energy-bar-container {
+    width: 80%;
+    background: #444;
+    height: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#energy-bar {
+    background: #ff5722;
+    height: 100%;
+    width: 50%;
+    border-radius: 10px;
+    transition: width 0.2s ease;
+}
+
+/* Enerji Durumu Yazısı */
+#energy-text {
+    font-size: 1em;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+/* Alt Menü */
+.bottom-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 20px rgba(255, 0, 255, 0.3);
+    z-index: 100;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.menu-item img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
+    filter: drop-shadow(0 0 5px #ff00ff);
+}
+
+.menu-item:hover {
+    color: #ff00ff;
+    transform: translateY(-5px);
+}
